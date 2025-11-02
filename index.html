@@ -22,7 +22,177 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0D1Kcm9S5/jrr6UoW9v51jIuOzRx9X1Ap++ngs/ieOUyKvp1" crossorigin="anonymous">
 
     <style>
-        /* Custom styles for responsiveness */
+        /* Custom styles for responsiveness - only applies on mobile */
+        @media (max-width: 991px) {
+            /* About section - override fixed margins on mobile */
+            #about {
+                padding: 80px 20px 80px 20px !important;
+                min-height: 100vh !important;
+            }
+
+            #about .my-auto {
+                padding: 20px 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+
+            #about .my-auto > img[src=""] {
+                display: none !important;
+            }
+
+            #about h1 {
+                font-size: 3rem !important;
+                margin-left: 0 !important;
+                margin-top: 40px !important;
+                margin-bottom: 20px !important;
+                text-align: center !important;
+                order: 1 !important;
+            }
+
+            #about h1 br {
+                display: none;
+            }
+
+            #about > div > div > div[style*="margin-top: 26px"] {
+                order: 2 !important;
+                margin-top: 0 !important;
+                margin-bottom: 20px !important;
+            }
+
+            #about a[download] {
+                margin-left: 0 !important;
+                display: block;
+                text-align: center;
+                margin: 0 auto !important;
+                padding: 12px 24px !important;
+            }
+
+            #about > div > div > div[style*="margin-top:-20%"] {
+                margin-top: 40px !important;
+                order: 3 !important;
+                margin-bottom: 30px !important;
+            }
+
+            #about > div > div > div[style*="margin-top:-20%"] > p {
+                text-align: center !important;
+                padding-left: 0 !important;
+                margin-bottom: 20px !important;
+            }
+
+            #about p {
+                margin: 30px auto !important;
+                max-width: 100% !important;
+                padding: 20px !important;
+                background: rgba(255, 255, 255, 0.85) !important;
+                border-radius: 10px !important;
+            }
+
+            .icons {
+                text-align: center;
+                margin-top: 40px !important;
+                margin-bottom: 30px !important;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px !important;
+            }
+
+            /* Skills section - override fixed margin on mobile */
+            #portfolio > div[style*="margin-left: 120px"] {
+                margin-left: 0 !important;
+            }
+            
+            #portfolio > div {
+                margin-left: 0 !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            #portfolio .portfolio-item {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            #portfolio .row {
+                justify-content: center !important;
+            }
+
+            #portfolio .portfolio-item img {
+                max-width: 150px !important;
+                height: auto !important;
+                width: 150px !important;
+            }
+
+            .port-head-cont {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .port-head-cont button {
+                margin: 5px;
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            /* Projects section */
+            #award-box .award-content {
+                width: 100% !important;
+                padding: 15px !important;
+            }
+
+            #award-box .award-content img {
+                max-width: 100% !important;
+                width: 150px !important;
+                height: auto !important;
+            }
+
+            /* Achievements section */
+            #experience .resume-item {
+                margin-bottom: 30px;
+            }
+
+            #experience .card {
+                margin: 0 auto 20px !important;
+                max-width: 100% !important;
+            }
+
+            /* Certificates section - override fixed margin on mobile */
+            #Certficate .container {
+                margin-left: 0 !important;
+            }
+
+            #Certficate .card {
+                max-width: 100% !important;
+                margin: 0 auto 20px !important;
+            }
+
+            #Certficate .card img {
+                max-width: 100% !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Contact section - override fixed margin on mobile */
+            #contact .container {
+                margin-left: 0 !important;
+            }
+
+            #contact h3 {
+                text-align: center !important;
+                padding: 0 15px;
+            }
+
+            #contact .sub-but {
+                text-align: center !important;
+            }
+
+            #contact .sub-but button {
+                margin: 0 auto;
+            }
+        }
+
         @media (max-width: 767px) {
             /* Navbar */
             .navbar-nav {
@@ -34,51 +204,94 @@
             }
 
             #sideNav .navbar-brand img {
-                width: 100px;
+                width: 80px;
                 margin-left: 0;
             }
 
             /* About section */
-            #about h1 {
-                font-size: 2.5rem;
-                text-align: center;
-                margin-top: 20px;
+            #about {
+                padding: 60px 15px 60px 15px !important;
+                min-height: 100vh !important;
             }
 
-            #about a {
-                display: block;
-                text-align: center;
-                margin-top: 10px;
+            #about h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                margin-top: 10px !important;
+            }
+
+            #about a[download] {
+                padding: 12px 24px !important;
+                font-size: 14px !important;
+            }
+
+            #about > div > div > div:nth-child(3) > div {
+                font-size: 18px !important;
+            }
+
+            #about p {
+                font-size: 14px !important;
+                padding: 12px !important;
             }
 
             .icons {
-                text-align: center;
-                margin-top: 20px;
+                margin-top: 25px !important;
             }
 
             .icons a {
-                margin: 0 10px;
-                font-size: 1.5rem;
+                margin: 5px;
+                font-size: 1.2rem;
+                width: 50px !important;
+                height: 50px !important;
             }
 
-            /* Text adjustments */
-            #about p {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
+            .icons a i {
+                line-height: 50px !important;
+                font-size: 20px !important;
+            }
+
+            /* Skills section */
+            #portfolio .portfolio-item img {
+                max-width: 120px !important;
+                width: 120px !important;
+                height: auto !important;
+            }
+
+            .port-head-cont button {
+                font-size: 12px;
+                padding: 6px 10px;
+                margin: 3px;
+            }
+
+            /* Projects section */
+            #award-box .award-content img {
+                width: 120px !important;
+            }
+
+            /* Contact section */
+            #contact h3 {
+                font-size: 2rem !important;
             }
         }
 
-        @media (max-width: 1200px) {
-            /* Adjust layout for medium screens */
+        @media (max-width: 575px) {
             #about h1 {
-                font-size: 3rem;
+                font-size: 2rem !important;
             }
 
-            .icons {
-                text-align: center;
-                margin-top: 20px;
+            #portfolio .portfolio-item img {
+                max-width: 100px !important;
+                width: 100px !important;
+            }
+
+            .icons a {
+                width: 45px !important;
+                height: 45px !important;
+            }
+
+            .icons a i {
+                line-height: 45px !important;
+                font-size: 18px !important;
             }
         }
         
@@ -135,10 +348,8 @@
                 <a href="Aashutosh_Tiwari_Resume.pdf" download="Aashutosh_Tiwari_Resume" style="padding: 10px 20px; background-color: #072585; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;margin-left: 870px;">Download My Resume</a>
               </div>
               <div style="margin-top:-20%;">
-              <div style="color: #010613; font-weight: bold; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Some Time You Need To Fall Before You Can Fly 
-                  <a></a>
-              </div>
               <p style="max-width: 500px; color: #01040d; font-size: 16px; line-height: 1.6; text-align: justify; font-family: Arial, sans-serif; padding: 10px; border-left: 4px solid #072585;">
+                <span style="color: #010613; font-weight: bold; font-size: 20px; display: block; margin-bottom: 15px;">Some Time You Need To Fall Before You Can Fly</span>
                 "My name is Aashutosh Tiwari, and I am a passionate student hailing from Bhopal, currently pursuing a Bachelor's degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science. I am currently enjoying my engineering journey, where I am delving deeper into the realms of AI and DS, honing my skills in programming, machine learning, and data analysis."
             </p>
               <ul class="list-inline list-social-icons mb-0">
@@ -487,7 +698,7 @@
                   <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); max-width: 400px; margin: 0 auto;">
                     <div class="resume-content mr-auto" style="text-align: center;">
                       <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i>Python With DataScience</h4>
-                      <img src="img\Certficate\Shreyansh Certificate.png" alt="NTPEL Image" style="width: 350px; height: 350px; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                      <img src="img\Certficate\Shreyansh Certificate.png" alt="NTPEL Image" class="img-fluid" style="max-width: 100%; height: auto; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                       <h5>Python With DataScience - Sheryians Coding School</h5>
                     </div>
                     <div class="resume-date text-md-right" style="text-align: center;">
@@ -500,7 +711,7 @@
                   <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); max-width: 400px; margin: 0 auto;">
                     <div class="resume-content mr-auto" style="text-align: center;">
                       <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i>NTPEL</h4>
-                      <img src="img\Certficate\NTPEL.jpg" alt="NTPEL Image" style="width: 350px; height: 350px; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                      <img src="img\Certficate\NTPEL.jpg" alt="NTPEL Image" class="img-fluid" style="max-width: 100%; height: auto; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                       <h5>A Joy of Computation Using Python</h5>
                     </div>
                     <div class="resume-date text-md-right" style="text-align: center;">
@@ -513,7 +724,7 @@
                   <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); max-width: 400px; margin: 0 auto;">
                     <div class="resume-content mr-auto" style="text-align: center;">
                       <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i>HackerRank</h4>
-                      <img src="img\Certficate\HackerRank.jpg" alt="HackerRank Image" style="width: 350px; height: 350px; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                      <img src="img\Certficate\HackerRank.jpg" alt="HackerRank Image" class="img-fluid" style="max-width: 100%; height: auto; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                       <h5>Python(Basic) - Hacker Rank</h5>
                     </div>
                     <div class="resume-date text-md-right" style="text-align: center;">
@@ -526,7 +737,7 @@
                   <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); max-width: 400px; margin: 0 auto;">
                     <div class="resume-content mr-auto" style="text-align: center;">
                       <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i>Udemy</h4>
-                      <img src="img\Certficate\GuI.jpg" alt="Udemy Image" style="width: 350px; height: 350px; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                      <img src="img\Certficate\GuI.jpg" alt="Udemy Image" class="img-fluid" style="max-width: 100%; height: auto; margin: 10px auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                       <h5>Create a GUI with Python</h5>
                     </div>
                     <div class="resume-date text-md-right" style="text-align: center;">
